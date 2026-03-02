@@ -22,7 +22,6 @@ echo "Docker 이미지 빌드 및 푸시..."
 # 현재 리포지토리에서는 Dockerfile 이름이 'dockerfile' 이므로 --dockerfile 옵션을 명시
 gcloud builds submit . \
   --tag "${IMAGE}" \
-  --dockerfile="dockerfile" \
   --project "${PROJECT_ID}"
 
 echo "Cloud Run (fully managed) 에 배포..."
